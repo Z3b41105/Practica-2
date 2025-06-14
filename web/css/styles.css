@@ -1,0 +1,112 @@
+/* External thing imports */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.main-content h1 {
+    font-family: Lexend;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.main-content p {
+    font-family: Lexend;
+    font-weight: 600;
+}
+
+.messages-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-input {
+    height: 50px;
+    font-size: 20px;
+    width: 400px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.button-input {
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    border-width: 0px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.button-input:hover {
+    background-color: rgb(30, 212, 30);
+    transform: scaleX(1.05) scaleY(1.05);
+}
+
+.button-input:active {
+    background-color: rgb(20, 150, 20);
+    transform: scaleX(0.95) scaleY(0.95);
+}
+
+.messages-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 25px auto;
+    padding-bottom: 12px;
+    width: 520px;
+    max-height: 100%;
+    /* Makes if the chat messages exceeds the max height creates a scrollbar */
+    overflow-y: auto;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+}
+
+.others-message,
+.your-message {
+    border-radius: 5px;
+    max-width: 350px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: left;
+    white-space: normal;
+
+    /* Shadow effect */
+    filter: drop-shadow(0px 2px 0px #525252);
+    
+    /* Doesn't allow the words to go out from the text background */
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.others-message {
+    background-color: #dddddd;
+    margin: 0 auto 0 0;
+}
+
+.your-message {
+    background-color: #23a8c0;
+    margin: 0 0 0 auto;
+}
